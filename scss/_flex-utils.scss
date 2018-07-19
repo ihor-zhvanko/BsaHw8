@@ -1,0 +1,39 @@
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: flex-end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}

@@ -1,0 +1,117 @@
+@import url("https://use.fontawesome.com/releases/v5.1.1/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700");
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.grow-1 {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
+.align-self-end {
+  -ms-flex-item-align: end;
+  align-self: end; }
+
+.align-items-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.align-items-center {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.align-self-center {
+  -ms-flex-item-align: center;
+  align-self: center; }
+
+.justify-content-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+ul {
+  display: inline;
+  list-style: none; }
+  ul li {
+    display: inline-block; }
+
+a {
+  text-decoration: none; }
+
+html, body {
+  font-family: 'PT Serif', serif;
+  font-size: 14px; }
+
+body {
+  background-color: #e6ded2; }
+  body > .wrapper {
+    max-width: 1200px;
+    margin: auto; }
+  body header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 1rem 0;
+    position: relative; }
+    body header .logo1 {
+      max-height: 100px;
+      min-height: 100px;
+      height: auto; }
+    body header .icons {
+      font-size: 20px;
+      padding: 1rem; }
+      body header .icons > *:not(:last-child) {
+        margin-right: 1rem; }
+    body header .menu {
+      font-size: 18px; }
+      body header .menu .menu-item:not(:last-child) {
+        margin-right: 1.3rem; }
+    body header::before {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-top: 1px solid black;
+      border-bottom: 2px solid black; }
+    body header::after {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-top: 2px solid black;
+      border-bottom: 1px solid black; }

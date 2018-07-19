@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['scss', 'watch']);
 
 gulp.task('scss', function () {
-  gulp.src('scss/main.scss')
+  gulp.src('scss/styles.scss')
     .pipe(sass().on('error', function (e) {
       gutil.log(e);
     }))

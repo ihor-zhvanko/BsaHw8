@@ -1,3 +1,21 @@
-.container {
-  color: red;
+.logo1 {
+  max-height: 100px;
+  min-height: 100px;
+  height: auto;
+}
+
+.icons {
+  font-size: 20px;
+  padding: 1rem;
+
+  >*:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.menu {
+  font-size: 18px;
+  .menu-item:not(:last-child) {
+    margin-right: 1.3rem;
+  }
 }
