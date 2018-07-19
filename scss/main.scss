@@ -1,0 +1,15 @@
+$body-color: #e6ded2;
+
+body {
+  &>header {
+    @import '_header';
+  }
+
+  &>main {
+    @import '_main';
+  }
+
+  &>footer {
+    @import '_footer';
+  }
+}
