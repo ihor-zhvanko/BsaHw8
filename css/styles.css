@@ -190,7 +190,7 @@ html, body {
     left: 0;
     height: 100%;
     width: 40px;
-    background: url(/img/hand.svg) no-repeat;
+    background: url(img/hand.svg) no-repeat;
     background-size: contain; }
 
 .uppercase {
