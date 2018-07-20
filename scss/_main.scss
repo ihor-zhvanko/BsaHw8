@@ -41,9 +41,27 @@ section {
 }
 
 aside {
+@keyframes leftRightAnim {
+  0% {
+    left: 0px;
+  }
+
+  50% {
+    left: 10px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
   &>* {
     position: relative;
     padding-bottom: 1.5rem;
+
+    &:hover .hand::before {
+      animation: leftRightAnim 0.5s ease-in-out;
+    }
   }
 
   min-width: 300px;
