@@ -3,6 +3,12 @@
   margin-bottom: 0.5rem;
 }
 
+.mr-before-03 {
+  &::before {
+    margin-right: 0.3rem;
+  }
+}
+
 @for $i from 1 through 3 {
   // Margins
   .m-#{$i} {
@@ -21,6 +27,10 @@
 
   .mr-#{$i} {
     margin-right: #{$i}rem;
+  }
+
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
   }
 
   // Paddings
