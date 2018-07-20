@@ -394,8 +394,22 @@ body {
       @media screen and (max-width: 425px) {
         body main section .card {
           max-width: 100%; } }
+      body main section .card .img-wrapper {
+        overflow: hidden; }
       body main section .card img {
-        width: 100%; }
+        width: 100%;
+        -webkit-transform: scale(1) rotate(0deg);
+        -ms-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+        transition: -webkit-transform 1s ease-in-out;
+        -o-transition: transform 1s ease-in-out;
+        transition: transform 1s ease-in-out;
+        transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out; }
+      body main section .card:hover img {
+        -webkit-transform: scale(1.2) rotate(10deg);
+        -ms-transform: scale(1.2) rotate(10deg);
+        transform: scale(1.2) rotate(10deg); }
   body main aside {
     min-width: 300px; }
     body main aside > * {
