@@ -1,14 +1,30 @@
 @import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
 
-@import 'flex-utils';
-
 $body-color: #e6ded2;
+$input-bg-color: #fef6e9;
 
+// Screen sizes
+$mobile-l-size: 425px;
+$tablet-size: 768px;
+$laptop-size: 1024px;
+
+@import 'flex-utils';
+@import 'spacers-utils';
+
+// Common styles
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 50%;
 }
 
 ul {
@@ -22,6 +38,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 html, body {
@@ -29,6 +46,119 @@ html, body {
   font-size: 14px;
 }
 
+.hand {
+  $hand-space: 40px;
+
+  padding-left: $hand-space + 10px;
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: $hand-space;
+
+    background: url(/img/hand.svg) no-repeat;
+    background-size: contain;
+  }
+}
+
+// text utils
+.uppercase {
+  text-transform: uppercase;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// Headers
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+// Inputs
+input[type="text"], input[type="email"], input[type="search"] {
+  border: 1px solid lightgray;
+  background: $input-bg-color;
+  padding: 0.7rem 0.5rem;
+  font: inherit;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+input[type="submit"] {
+  border: 0px;
+  color: white;
+  background: black;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+// Search with glass
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &::before {
+    position: absolute;
+    right: 10px;
+    top: 0.7rem;
+  }
+}
+
+// Lines
+.top-lines {
+  &::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+
+.bottom-lines {
+  &::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+
+// Blog styles
 body {
   background-color: $body-color;
 
@@ -38,14 +168,15 @@ body {
   }
 
   header {
-    display: flex;
-    padding: {
-      top: 5px;
-      bottom: 5px;
-    }
-    margin: 1rem 0;
-    position: relative;
+    $padding-for-borders: 5px;
     @import 'header';
+
+    padding: calc(0.7rem + #{$padding-for-borders}) 0;
+    position: relative;
+
+    @media screen and (max-width:$mobile-l-size) {
+      flex-direction: column-reverse;
+    }
 
     &::before {
       content: ' ';
@@ -74,9 +205,13 @@ body {
 
   main {
     @import 'main';
+    @media screen and (max-width: $tablet-size) {
+      flex-wrap: wrap;
+    }
   }
 
   footer {
+    position: relative;
     @import 'footer';
   }
 }

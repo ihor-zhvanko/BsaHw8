@@ -1,0 +1,78 @@
+
+section {
+  flex-wrap: wrap;
+
+  @keyframes fadeFromBottom {
+    from {
+      transform: translateY(500px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  .card {
+    max-width: 33.3333333%;
+    animation: fadeFromBottom 1s ease;
+
+    @media screen and (max-width:$laptop-size) {
+      max-width: 50%;
+    }
+  
+    @media screen and (max-width:$mobile-l-size) {
+      max-width: 100%;
+    }
+  
+    img {
+      width: 100%;
+    }
+  }
+}
+
+aside {
+  &>* {
+    position: relative;
+    padding-bottom: 1.5rem;
+  }
+
+  min-width: 300px;
+  @media screen and (max-width:$laptop-size) {
+    max-width: 100%;
+  }
+
+  .socials {
+    font-size: 30px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    .tag {
+      padding: 0.3rem 0.7rem;
+      margin: {
+        right: 1rem;
+        bottom: 1rem;
+      }
+  
+      background: black;
+      color: white;
+    }
+  }
+
+  .comments {
+    .comment {
+      margin: 0.7rem 0;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+
+      p {
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}

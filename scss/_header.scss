@@ -1,4 +1,4 @@
-.logo1 {
+.logo {
   max-height: 100px;
   min-height: 100px;
   height: auto;
@@ -6,16 +6,65 @@
 
 .icons {
   font-size: 20px;
-  padding: 1rem;
 
   >*:not(:last-child) {
     margin-right: 1rem;
   }
-}
 
-.menu {
-  font-size: 18px;
-  .menu-item:not(:last-child) {
-    margin-right: 1.3rem;
+  li {
+    margin-right: 0.3rem;
+  }
+
+  .socials {
+    @media screen and (max-width:$mobile-l-size) {
+      display: none;
+    }
   }
 }
+
+nav.navbar {
+  z-index: 10;
+  @media screen and (max-width:$mobile-l-size) {
+    position: fixed;
+    background-color: rgba(230, 222, 210, 0.97);
+    top: 0;
+    left: -100vw;
+    transition: left 0.5s;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .menu {
+    font-size: 18px;
+
+    .menu-item:not(:last-child)  {
+      margin-right: 2rem;
+
+      @media screen and (max-width:$mobile-l-size) {
+        display: block;
+        text-align: center;
+        margin: 2rem 0;
+      }
+    }
+  }
+}
+
+input#hamburgerTrigger {
+    display: none;
+
+    &+label[for="hamburgerTrigger"] {
+      display: none;
+      z-index: 999999;
+      font-size: 20px;
+
+      @media screen and (max-width:$mobile-l-size) {
+        display: inline-block;
+      }
+    }
+
+    &:checked~nav.navbar {
+      left: 0;
+    }
+}
+
