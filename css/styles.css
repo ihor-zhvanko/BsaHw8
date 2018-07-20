@@ -410,7 +410,8 @@ body {
       margin: 0.7rem 0; }
       body main aside .comments .comment img {
         width: 70px;
-        height: 70px; }
+        height: 70px;
+        min-width: 70px; }
       body main aside .comments .comment p {
         -webkit-box-flex: 1;
         -ms-flex: 1;
