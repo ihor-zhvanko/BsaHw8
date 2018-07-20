@@ -257,7 +257,10 @@ input[type="submit"] {
   padding: 1rem;
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  cursor: pointer; }
+  input[type="submit"]:hover {
+    background: grey; }
 
 .search {
   position: relative;
